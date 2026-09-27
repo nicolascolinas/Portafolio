@@ -2015,3 +2015,31 @@ button {
     transition: opacity 0.5s ease;
 }
 .facebook { background: #1877F2; }
+
+
+/* ===== Mobile menu visibility ===== */
+@media (max-width: 700px) {
+  .header {
+    background: #ffffff;
+    border-bottom: 1px solid #cfe8f8;
+    box-shadow: 0 8px 24px rgba(8,119,201,.10);
+  }
+  .menu-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #e7f4fd;
+    color: #0877c9;
+  }
+  .nav {
+    background: #eaf6ff;
+    border-top: 1px solid #b9def5;
+    border-bottom: 1px solid #b9def5;
+    box-shadow: 0 16px 34px rgba(8,119,201,.16);
+  }
+  .nav a:not(.nav-cta) {
+    color: #17354b;
+    background: rgba(255,255,255,.64);
+    border-bottom-color: #d4eaf7;
+  }
+}

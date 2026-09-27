@@ -164,3 +164,21 @@ footer strong{color:var(--ink)}
   .day-status{font-size:7px}
   .day-empty{min-height:64px}
 }
+
+
+/* ===== Mobile header visibility ===== */
+@media (max-width: 620px) {
+  .topbar {
+    background: #1b211e;
+    border-bottom: 1px solid rgba(221,161,143,.32);
+    box-shadow: 0 10px 30px rgba(0,0,0,.38);
+    backdrop-filter: blur(16px);
+  }
+  .nav-cta {
+    padding: 9px 11px;
+    border: 1px solid rgba(221,161,143,.38);
+    border-radius: 9px;
+    background: rgba(197,111,85,.12);
+    color: #f0eee8;
+  }
+}
