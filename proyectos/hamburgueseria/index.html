@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <base href="/proyectos/hamburgueseria/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COLINK Hamburguesería - hamburguesas artesanales, combos y pedidos online.">
+  <meta name="theme-color" content="#080808">
+  <title>COLINK Hamburguesería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+   <link rel="icon" type="image/x-icon" href="img/logo-colink.png">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="COLINK Hamburguesería - Inicio">
+        <img class="brand-logo" src="img/logo-colink.png" alt="Logo de COLINK">
+        <span class="brand-copy">
+          <strong>COLINK</strong>
+          <small>HAMBURGUESERÍA</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#promos">Promos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="social-link" href="https://www.instagram.com/colinkdigital/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+        </a>
+        <a class="social-link" href="https://wa.me/5491123580709" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"></path><path d="M8.5 8.5c.3 3 2 4.8 5 6"></path></svg>
+        </a>
+        <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L20.5 8H6.1"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">HAMBURGUESAS ARTESANALES</p>
+          <h1>HAMBURGUESAS<br><span>QUE LA ROMPEN.</span></h1>
+          <p class="hero-text">Carne smash, ingredientes frescos y recetas con identidad propia. Pedí fácil, rápido y sin vueltas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Hacer pedido <span>→</span></a>
+            <a class="btn btn-ghost" href="#menu">Ver menú</a>
+          </div>
+        </div>
+
+        <div class="hero-food reveal" aria-hidden="true">
+          <div class="hero-image-wrap">
+            <img src="img/colink-supreme.jpg" alt="">
+            <div class="hero-price-pill"><small>Desde</small><strong>$9.900</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-strip" aria-label="Beneficios">
+      <div class="container benefits-grid">
+        <article>
+          <span class="benefit-icon">🍔</span>
+          <div><strong>Ingredientes frescos</strong><small>Calidad en cada bocado</small></div>
+        </article>
+        <article>
+          <span class="benefit-icon">⚡</span>
+          <div><strong>Pedido rápido</strong><small>Tu compra en pocos pasos</small></div>
+        </article>
+        <article>
+          <span class="benefit-icon">🔒</span>
+          <div><strong>Pago seguro</strong><small>Efectivo o Mercado Pago</small></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">NUESTRO MENÚ</p>
+            <h2>Elegí tu próxima favorita</h2>
+          </div>
+          <p>Todo el menú en un solo lugar. Agregá productos, revisá tu carrito y completá el pedido desde la web.</p>
+        </div>
+
+        <div class="filter-tabs reveal" id="categoryTabs">
+          <button class="filter-tab active" data-filter="todas">Todas</button>
+          <button class="filter-tab" data-filter="hamburguesas">Hamburguesas</button>
+          <button class="filter-tab" data-filter="papas">Papas</button>
+          <button class="filter-tab" data-filter="nuggets">Nuggets</button>
+          <button class="filter-tab" data-filter="bebidas">Bebidas</button>
+          <button class="filter-tab" data-filter="promos">Promos</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <section class="promos-section section" id="promos">
+      <div class="container">
+        <article class="promo-card reveal">
+          <div class="promo-copy">
+            <p class="eyebrow">PROMO DESTACADA</p>
+            <h2>2 burgers + papas + bebidas</h2>
+            <p>Un combo pensado para compartir. Dos hamburguesas, papas grandes y dos bebidas bien frías.</p>
+            <button class="btn btn-primary" data-add-promo>Agregar promo · $24.900</button>
+          </div>
+          <div class="promo-photo">
+            <img src="img/combo-duo.jpg" alt="Combo de dos hamburguesas con papas y bebidas">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section section" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow">SOBRE NOSOTROS</p>
+          <h2>Hacemos hamburguesas que dan ganas de volver.</h2>
+          <p>En COLINK combinamos carne de primera, ingredientes frescos y recetas propias para que cada pedido tenga sabor de verdad. De los clásicos a nuestras opciones especiales, todo está pensado para disfrutarse de principio a fin.</p>
+          <a class="text-link" href="#menu">Conocé el menú <span>→</span></a>
+        </div>
+
+        <div class="about-features reveal">
+          <article>
+            <span>✦</span>
+            <h3>Ingredientes seleccionados</h3>
+            <p>Productos frescos y de calidad para lograr el mejor sabor en cada burger.</p>
+          </article>
+          <article>
+            <span>♨</span>
+            <h3>Recetas propias</h3>
+            <p>Sabores clásicos y propuestas especiales con identidad COLINK.</p>
+          </article>
+          <article>
+            <span>⚡</span>
+            <h3>Rápido y simple</h3>
+            <p>Elegí tu pedido, completá tus datos y nosotros nos ocupamos del resto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contacto">
+      <div class="container contact-banner reveal">
+        <div>
+          <p class="eyebrow">¿TENÉS HAMBRE?</p>
+          <h2>Tu próxima burger está a unos clics.</h2>
+        </div>
+        <a class="btn btn-primary" href="#menu">Ver menú</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" href="#top">
+          <img class="brand-logo" src="img/logo-colink.png" alt="Logo COLINK">
+          <span class="brand-copy"><strong>COLINK</strong><small>HAMBURGUESERÍA</small></span>
+        </a>
+        <p>Hamburguesas de calidad, buen sabor y una experiencia simple de principio a fin.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/colinkdigital/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=61594448894369" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://wa.me/5491123580709" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Enlaces</h3>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#promos">Promos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contacto</h3>
+        <p>📞 11-2358-0709</p>
+        <p>✉ colinkdigital@gmail.com</p>
+        <p>📍 Buenos Aires, Argentina</p>
+        <p>🕒 Todos los días · 12:00 a 00:00</p>
+      </div>
+
+      <form class="feedback-form" id="feedbackForm">
+        <h3>Quejas y sugerencias</h3>
+        <p>Tu opinión nos ayuda a mejorar.</p>
+        <label>
+          <span>Nombre (opcional)</span>
+          <input type="text" name="name" maxlength="60" autocomplete="name" placeholder="Tu nombre">
+        </label>
+        <label>
+          <span>Mensaje</span>
+          <textarea name="message" maxlength="800" required placeholder="Contanos tu experiencia..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Enviar mensaje</button>
+        <small class="form-status" id="feedbackStatus"></small>
+      </form>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 COLINK Hamburguesería.</span>
+      <span>Demo comercial desarrollada por COLINK Digital.</span>
+    </div>
+  </footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <div><p class="eyebrow">TU PEDIDO</p><h3>Carrito</h3></div>
+      <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">
+      <span>🛒</span><h4>Tu carrito está vacío</h4><p>Agregá algo rico del menú.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn" disabled>Continuar pedido</button>
+      <small>El total final se valida nuevamente en el servidor.</small>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutBackdrop"></div>
+  <section class="checkout-modal" id="checkoutModal" aria-hidden="true" aria-labelledby="checkoutTitle">
+    <div class="checkout-header">
+      <div><p class="eyebrow">FINALIZAR PEDIDO</p><h3 id="checkoutTitle">Datos de entrega</h3></div>
+      <button class="close-cart" id="closeCheckout" aria-label="Cerrar checkout">×</button>
+    </div>
+    <form id="checkoutForm" class="checkout-form">
+      <div class="field-grid">
+        <label><span>Nombre y apellido</span><input name="name" required maxlength="80" autocomplete="name"></label>
+        <label><span>Teléfono</span><input name="phone" required maxlength="30" autocomplete="tel" placeholder="11 1234-5678"></label>
+      </div>
+      <label><span>Dirección de entrega</span><input name="address" required maxlength="140" autocomplete="street-address" placeholder="Calle, número y localidad"></label>
+      <label><span>Indicaciones</span><textarea name="notes" maxlength="400" placeholder="Timbre, piso, referencias, sin cebolla, etc."></textarea></label>
+      <fieldset class="payment-options">
+        <legend>Forma de pago</legend>
+        <label class="payment-card"><input type="radio" name="paymentMethod" value="cash" checked><span><strong>Efectivo / al recibir</strong><small>El pedido queda registrado y pendiente.</small></span></label>
+        <label class="payment-card"><input type="radio" name="paymentMethod" value="mercadopago"><span><strong>Mercado Pago</strong><small>Te redirigimos al checkout seguro cuando esté configurado.</small></span></label>
+      </fieldset>
+      <div class="checkout-summary"><span>Total</span><strong id="checkoutTotal">$0</strong></div>
+      <button class="btn btn-primary checkout-submit" type="submit" id="submitOrder">Confirmar pedido</button>
+      <small class="form-status" id="checkoutStatus"></small>
+    </form>
+  </section>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

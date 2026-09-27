@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="es"><head>
+    <base href="/proyectos/barberia/"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agenda · COLINK</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="admin.css"></head>
+<body><header><a href="index.html" class="brand">COLINK <small>BARBERÍA</small></a><a href="index.html">← volver al sitio</a></header>
+<main><section id="loginCard" class="login"><p>PANEL DEL NEGOCIO</p><h1>Agenda de turnos.</h1><form id="loginForm"><input id="adminKey" type="password" placeholder="Clave" required><button>Entrar ↗</button></form><small>Demo local: <b>demo1234</b></small></section>
+<section id="dashboard" class="dashboard hidden"><div class="head"><div><p>AGENDA</p><h1>Turnos.</h1></div><button id="refreshBtn">Actualizar</button></div>
+<div class="filters"><button class="active" data-filter="todos">Todos</button><button data-filter="confirmado">Confirmados</button><button data-filter="atendido">Atendidos</button><button data-filter="cancelado">Cancelados</button></div>
+<div id="appointmentList"></div></section></main><script src="admin.js"></script></body></html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <base href="/proyectos/barberia/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="COLINK Barbería — reservas online.">
+  <title>COLINK Barbería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+   <link rel="icon" type="image/x-icon" href="../climatizacion/img/logo-colink.png">
+</head>
+<body>
+  
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="COLINK Barbería">
+      <img src="assets/logo-colink.png" alt="COLINK">
+      <span><strong>COLINK</strong><small>BARBERÍA</small></span>
+    </a>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#reservar">Reservar</a>
+    </nav>
+    <a class="nav-cta" href="#reservar">Pedir turno ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="kicker">BARBERÍA CONTEMPORÁNEA · OLIVOS</p>
+        <h1>Tu estilo.<br><em>Bien trabajado.</em></h1>
+        <p class="lead">Corte, barba y cuidado personal con una atención pensada para vos. Reservá el día y horario que mejor te quede.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#reservar">Reservar turno</a>
+          <a class="ghost-btn" href="#servicios">Ver servicios ↓</a>
+        </div>
+        <div class="hero-bottom">
+          <span>COLINK BARBERÍA</span>
+          <span>LUN–SÁB · 10 A 20 HS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicios">
+      <div class="section-label"><span>01</span><p>SERVICIOS</p></div>
+      <div class="services-main">
+        <div class="section-title">
+          <h2>Lo necesario.<br><em>Hecho bien.</em></h2>
+          <p>No usamos un catálogo de cortes. Elegís el servicio y el estilo final se conversa con tu barbero.</p>
+        </div>
+        <div class="service-list">
+          <button class="service-row" data-service="corte">
+            <span class="num">01</span><strong>Corte</strong><span>45 min</span><b>$14.000</b><i>↗</i>
+          </button>
+          <button class="service-row" data-service="barba">
+            <span class="num">02</span><strong>Barba</strong><span>30 min</span><b>$10.000</b><i>↗</i>
+          </button>
+          <button class="service-row" data-service="combo">
+            <span class="num">03</span><strong>Corte + barba</strong><span>60 min</span><b>$21.000</b><i>↗</i>
+          </button>
+          <button class="service-row" data-service="coloracion">
+            <span class="num">04</span><strong>Coloración</strong><span>75 min</span><b>$56.000</b><i>↗</i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="studio" id="estudio">
+      <div class="studio-photo">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1400&q=86" alt="Interior de barbería">
+      </div>
+      <div class="studio-copy">
+        <div class="section-label light"><span>02</span><p>EL ESTUDIO</p></div>
+        <blockquote>“No se trata de salir igual a todos. Se trata de salir mejor vos.”</blockquote>
+        <p class="studio-text">Un espacio tranquilo, turnos organizados y profesionales con estilos distintos. Sin apuro y sin hacerte esperar de más.</p>
+        <div class="studio-meta">
+          <p><small>HORARIOS</small>Lunes a sábado<br>10:00 — 20:00</p>
+          <p><small>ZONA</small>Olivos<br>Buenos Aires</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking" id="reservar">
+      <div class="section-label"><span>03</span><p>RESERVAS</p></div>
+      <div class="booking-head">
+        <h2>Elegí el día.<br><em>Después el horario.</em></h2>
+        <p>Primero seleccioná servicio y profesional. El calendario te muestra el mes completo y habilita los días disponibles.</p>
+      </div>
+
+      <div class="booking-shell">
+        <aside class="booking-side">
+          <div class="step">
+            <span>1</span>
+            <label for="service">Servicio</label>
+            <select id="service"><option value="">Elegir servicio</option></select>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <label for="barber">Profesional</label>
+            <select id="barber"><option value="">Elegir profesional</option></select>
+          </div>
+          <div class="selection-summary" id="selectionSummary">
+            Elegí servicio y profesional para ver disponibilidad.
+          </div>
+        </aside>
+
+        <div class="calendar-panel">
+          <div class="calendar-head">
+            <button id="prevMonth" aria-label="Mes anterior">←</button>
+            <div>
+              <strong id="monthLabel">Mes</strong>
+              <span>Elegí un día disponible</span>
+            </div>
+            <button id="nextMonth" aria-label="Mes siguiente">→</button>
+          </div>
+          <div class="weekdays">
+            <span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span><span>DOM</span>
+          </div>
+          <div class="calendar-legend" aria-label="Referencias de disponibilidad">
+            <span><i class="legend-dot available"></i>Disponible</span>
+            <span><i class="legend-dot limited"></i>Pocos turnos</span>
+            <span><i class="legend-dot full"></i>Completo</span>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </div>
+
+        <aside class="times-panel">
+          <div class="times-heading">
+            <span>3</span>
+            <div><strong>Horario</strong><small id="chosenDateLabel">Elegí un día</small></div>
+          </div>
+          <div id="timesGrid" class="times-grid"><p>Los horarios aparecerán acá.</p></div>
+        </aside>
+      </div>
+
+      <form id="bookingForm" class="booking-form hidden">
+        <div class="form-heading">
+          <span>4</span>
+          <div><strong>Último paso</strong><small>Completá tus datos</small></div>
+        </div>
+        <div class="field"><label for="name">Nombre</label><input id="name" required placeholder="Tu nombre"></div>
+        <div class="field"><label for="phone">WhatsApp</label><input id="phone" required placeholder="11 5555 5555"></div>
+        <div class="field"><label for="email">Email <small>(opcional)</small></label><input id="email" type="email" placeholder="tu@email.com"></div>
+        <div class="field wide"><label for="notes">Nota <small>(opcional)</small></label><input id="notes" placeholder="Algo que debamos saber"></div>
+        <button class="submit-btn" type="submit">Confirmar turno ↗</button>
+        <p id="formMessage" class="message"></p>
+        <p class="notify-note">El turno se guarda en la agenda. Las notificaciones por mail y WhatsApp se activan al conectar las credenciales del negocio.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#inicio">
+      <img src="assets/logo-colink.png" alt="COLINK">
+      <span><strong>COLINK</strong><small>BARBERÍA</small></span>
+    </a>
+    <p>Olivos · Buenos Aires<br>Lun–Sáb · 10 a 20 hs</p>
+    <p>Instagram<br><strong>@colinkbarberia</strong></p>
+    <p>WhatsApp<br><strong>11 5555 5555</strong></p>
+    <a class="admin-link" href="admin.html">Panel del negocio ↗</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
